@@ -33,9 +33,21 @@ Por lo tanto, se utiliza un for loop para realizar los cálculos correspondiente
 
 Las gráficas correspondiente a todos los puntos se realizaron por separado, para prevenir errores en donde se sobre-escriben todas las gráficas en el mismo archivo. 
 Por lo tanto, cada gráfica empieza con un plt.figure(), el cual forma una nueva figura utilizando matplotlib, y aplica welch y semiogy de la biblioteca de scipy.signal. 
-Mientras la densidad espectral de potencia del 
+La ![densidad espectral sin ruido](https://github.com/lrojasz/Tarea4/blob/master/DSPsinruido.png) tiene un comportamiento oscilatorio en donde eventualmente oscila entre 10 <sup>-7</sup> y 10 <sup>-9</sup>. 
+En los casos con ruido, el comportamiento final tiende a aumentar con un ruido mayor. Esto se ve claramente en las figuras de densidad espectral para ![-2 dB](https://github.com/lrojasz/Tarea4/blob/master/DSPconruido-2db.png), ![-1 dB](https://github.com/lrojasz/Tarea4/blob/master/DSPconruido-1db.png), ![0 dB](https://github.com/lrojasz/Tarea4/blob/master/DSPconruido0db.png), ![1 dB](https://github.com/lrojasz/Tarea4/blob/master/DSPconruido1db.png), ![2 dB](https://github.com/lrojasz/Tarea4/blob/master/DSPconruido2db.png) y ![3 dB](https://github.com/lrojasz/Tarea4/blob/master/DSPconruido3db.png) 
 
-![Densidad Espectral](https://github.com/lrojasz/Tarea4.git/DSPsinruido.png)
+### Punto 5
+
+La decodificación de la señal se realiza utilizando el mismo código estudiado en clase en la discusión de la Tarea 4. 
+Aplicando un for loop que enumerata todos las señales ruidosas Rx, se inicializa un vector de bits identificados en donde si energía de una señal es menor a la mitad de la pseudo-energía de una onda, entonces esa señal es un 0. 
+En el caso contrario, sería un 1. 
+El código correspondiente produce la taza de error de bits (BER) para cada Rx, en donde hay un nuevo Rx por cada valor de SNR utilizado en el punto anterior. 
+
+### Punto 6
+
+En este punto, se busca comparar el los valores de BER calculados en el punto 5 con los valores de SNR utilizados para las señales ruidosas del punto 4. 
+Por lo tanto, se procura crear una arreglo de valores SNR correspondientes, y se grafica la línea utilizando la biblioteca matplotlib. 
+La gráfica de ![BER versus SNR](https://github.com/lrojasz/Tarea4/blob/master/BERenfuncionSNR.png) claramente demuestra una relación exponencial. 
 
 
 ## Construido con
