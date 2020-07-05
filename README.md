@@ -35,7 +35,7 @@ Las gráficas correspondiente a todos los puntos se realizaron por separado, par
 Por lo tanto, cada gráfica empieza con un plt.figure(), el cual forma una nueva figura utilizando matplotlib, y aplica welch y semiogy de la biblioteca de scipy.signal. 
 Mientras la densidad espectral de potencia del 
 
-![Alt text](relative/path/to/DSPsinruido.png?raw=true "THIS IS AN IMAGE")
+![Densidad Espectral](https://github.com/lrojasz/Tarea4.git/DSPsinruido.png)
 
 
 ## Construido con
