@@ -34,8 +34,8 @@ Por lo tanto, se utiliza un for loop para realizar los cálculos correspondiente
 Las gráficas correspondiente a todos los puntos se realizaron por separado, para prevenir errores en donde se sobre-escriben todas las gráficas en el mismo archivo. 
 Por lo tanto, cada gráfica empieza con un plt.figure(), el cual forma una nueva figura utilizando matplotlib, y aplica welch y semiogy de la biblioteca de scipy.signal. 
 La densidad espectral sin ruido tiene un comportamiento oscilatorio en donde eventualmente oscila entre 10 <sup>-7</sup> y 10 <sup>-9</sup>. 
-![densidad espectral sin ruido](https://github.com/lrojasz/Tarea4/blob/master/DSPsinruido.png),
 En los casos con ruido, el comportamiento final tiende a aumentar con un ruido mayor. Esto se ve claramente en las figuras de densidad espectral correspondientes.
+![densidad espectral sin ruido](https://github.com/lrojasz/Tarea4/blob/master/DSPsinruido.png)
 ![-2 dB](https://github.com/lrojasz/Tarea4/blob/master/DSPconruido-2db.png)
 ![-1 dB](https://github.com/lrojasz/Tarea4/blob/master/DSPconruido-1db.png)
 ![0 dB](https://github.com/lrojasz/Tarea4/blob/master/DSPconruido0db.png) 
